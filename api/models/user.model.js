@@ -14,7 +14,11 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-},{timestamps:true}
+    profilePicture:{
+        type:String,
+        default:" https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
+    },
+},
 );
 const User = mongoose.model('User',userSchema);
 export default User;
